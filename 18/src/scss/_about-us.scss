@@ -1,0 +1,62 @@
+.about-us {
+    background-image: radial-gradient(circle at 0 0, #00c4c4, #00b7b7, #00adad, #009c9c), linear-gradient(to bottom, #00c4c4, #00c4c4);
+    color: $N0;
+    padding: 50px 0 50px;
+
+    @include media($screen-tablet) {
+        background-image: url('../img/about.png'), radial-gradient(circle at 0 0, #00c4c4, #00b7b7, #00adad, #009c9c), linear-gradient(to bottom, #00c4c4, #00c4c4);
+        background-repeat: no-repeat, no-repeat;
+        background-size: 45%, 100%;
+        background-position: 2% 60%;
+        padding: 100px 0 180px;
+    }
+    @include media($screen-netbook) {
+        background-position: 10% 60%;
+        background-size: 36%, 100%;
+        padding: 110px 0 200px;
+    }
+    @include media($screen-desktop-large) {
+        // background-image: url('../img/about.png'), radial-gradient(circle at 0 0, #00c4c4, #00b7b7, #00adad, #009c9c), linear-gradient(to bottom, #00c4c4, #00c4c4);
+        // background-repeat: no-repeat, no-repeat;
+        // background-size: 45%, 100%;
+        background-position: 8% 60%;
+        padding: 180px 0 220px;
+    }
+    &__section-container {
+        @include flex-col(flex-start, center);
+
+        @include media($screen-tablet) {
+            @include flex-row(flex-end, center);
+        } 
+        @include media($screen-netbook) {
+            @include flex-row(flex-end, center);
+        }
+    }
+    &__title {
+        margin-bottom: 20px;
+        font-size: $H60;
+        text-align: center;
+
+        @include media($screen-tablet) {
+            text-align-last: initial;
+        }
+        @include media($screen-desktop-large) {
+            margin-bottom: 34px;
+        }
+    }
+    &__text-wraper {
+        width: 100%;
+
+        @include media($screen-tablet) {
+            width: 50%;
+        } 
+        @include media($screen-desktop-large) {
+            width: 45%;
+        }
+    }
+    &__text {
+        &:nth-of-type(1) {
+            margin-bottom: 15px;
+        }
+    }
+}

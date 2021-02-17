@@ -1,0 +1,28 @@
+.footer {
+    background-color: $text-color;
+    padding: 32px 0 32px;
+    color: $footer-text-color;
+    font-size: $H16;
+    &__section-container {
+        @include flex-col(space-between, center);
+
+        @include media(620px) {
+            @include flex-row(space-between, center);
+        }
+    }
+    &__logo {
+        width: 64px;
+        height: 27px;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+    &__text {
+        &--left {
+            font-size: $H15;
+        }
+        span {
+            @include text($H15, 700, $footer-span-color);
+        }
+    }
+}

@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html,
+body {
+    min-height: 100vh;
+}
+body {
+    font-size: 100%;
+    font-family: $main-font;
+    color: $text-color;
+    font-weight: $light;
+    font-size: $H17;
+    line-height: 1.59;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
+button {
+    border: none;
+    outline: none;
+    color: $N0;
+    cursor: pointer;
+}
+input,
+textarea {
+    border: none;
+}
+textarea {
+    font: inherit;
+    &:focus {
+        outline: none;
+    }
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.section-container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.cahee-section-title {
+    @include text($H60, 700, $N0);
+    line-height: 1.2;
+    &--color-grey {
+        color: $text-color;
+    }
+
+    @include media($screen-netbook) {
+        @include text($H90, 700, $N0);
+        &--color-grey {
+            color: $text-color;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<title>Form</title>
+	<link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>  
+    <div class="modal-container">
+        <nav class="modal-nav">
+            <ul class="modal-nav__list">
+                <li class="modal-nav__item">
+                    <a href="#sign" class="modal-nav__link  modal-nav__link--active">Sign in</a>
+                </li>
+                <li class="modal-nav__item">
+                    <a href="#join" class="modal-nav__link">Join us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sections-container">
+            <section class="sign-in" id="sign">
+                <form action="#" method="post">
+                    <div class="form__controls-wrapper">
+                        <label class="form__label" for="username">Username</label>
+                        <input class="form__input" minlength="3" type="text" name="username" id="username" required pattern="^[a-zA-Z0-9\s]+$" 
+                        title="Must start with letter or number, may contain spaces">
+                    </div>
+                    <div class="form__controls-wrapper">
+                        <label class="form__label" for="password">Password</label>
+                        <input class="form__input" type="password" name="password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters">
+                    </div>
+                    <div class="form__checkbox-wrapper">
+                        <input class="form__input-checkbox" type="checkbox" name="keep" id="keep" checked>
+                        <label class="form__label form__label--checkbox" for="keep">
+                            <span class="form__checkbox">&#10004;</span>
+                            <span>Keep me signed in</span>
+                        </label>
+                    </div>
+                    <div class="form__btn-wrapper">
+                        <button type="submit" class="form__btn">Sign in</button>
+                    </div>
+                    <div class="form__links-wrapper">
+                        <a href="#" class="form__link">Forgot password</a>
+                        <a href="#join" class="form__link">Create an account</a>
+                    </div>
+                </form>
+            </section>
+
+            <section class="join-us" id="join">
+                <form action="#" method="post" class="form">
+                    <div class="form__controls-wrapper">
+                        <label class="form__label" for="new-username">Username</label>
+                        <input class="form__input" minlength="3" type="text" name="username" id="new-username" required pattern="^[a-zA-Z0-9]+$" title="Must start with letter or number">
+                    </div>
+                    <div class="form__controls-wrapper">
+                        <label class="form__label" for="new-password">Password</label>
+                        <input class="form__input" type="password" name="password" id="new-password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters">
+                    </div>
+                    <div class="form__controls-wrapper">
+                        <label class="form__label" for="repeat-password">Repeat password</label>
+                        <input class="form__input  form__input--repeat" type="password" name="repeat-password" id="repeat-password" required>
+                    </div>
+                    <div class="form__controls form__btn-wrapper">
+                        <button type="submit" class="form__btn">Join in</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+	<script src="js/bundle.js"></script>
+</body>
+</html>

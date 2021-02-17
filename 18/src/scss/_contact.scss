@@ -1,0 +1,79 @@
+.contact {
+    padding: 80px 0 100px;
+    background: url('../img/contact-bg.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+
+    @include media($screen-desktop-large) {
+        padding: 100px 0 80px;
+    }
+
+    &__section-container {
+        @include flex-col(center, center);
+    }
+    &__title {
+        margin-bottom: 30px;
+        @include media($screen-tablet-medium) {
+            margin-bottom: 48px;
+        }
+    }
+    &__text {
+        max-width: 346px;
+        margin-bottom: 30px;
+
+        @include media($screen-tablet-medium) {
+            margin-bottom: 46px;
+        }
+    }
+    &__content-wrapper {
+        @include flex-col;
+        flex-direction: column-reverse;
+        width: 100%;
+
+        @include media($screen-tablet-medium) {
+            width: initial;
+        }
+        @include media($screen-tablet) {
+            @include flex-row;
+        }
+    }
+    &__data {
+        margin-bottom: 40px;
+        @include media($screen-tablet) {
+            margin-bottom: 0;
+        }
+    }
+    &__item {
+        @include text($H17, $bold);
+        margin-bottom: 10px;
+        a {
+            display: block;
+            @include text($H20, $light);
+            line-height: 1.25;
+            &:hover {
+                color: $contact-input--focus-border;
+                text-decoration: overline;
+            }
+        }
+    }
+    &__link-totop {
+        display: block;
+        width: 45px;
+        height: 45px;
+        border-radius: 2px;
+        @include flex-col(center, center);
+        background-color: rgba($N0, 0.4);
+        position: absolute;
+        right: 25px;
+        bottom: 25px;
+        img {
+            width: 55%;
+            height: auto;
+        }
+        &:hover {
+            img {
+                transform: translateY(-20%);
+            }
+        }
+    }
+}

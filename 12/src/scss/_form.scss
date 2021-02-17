@@ -1,0 +1,81 @@
+.form {
+    &__controls-wrapper:not(.form__links-wrapper) {
+        @include flex(flex-start, flex-start, column);
+        margin-bottom: 18px;
+    }
+    &__checkbox-wrapper {
+        @include flex(flex-start, center, row);
+        font-size: $small-size;
+        margin-bottom: 40px;
+    }
+    &__links-wrapper {
+        @include flex(space-between, center, row);
+    }
+    &__label {
+        font-size: $secondary-size;
+        margin-bottom: 10px;
+
+        &--checkbox {
+            font-size: $small-size;
+            cursor: pointer;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+    }
+    &__input {
+        background: none;
+        outline: none;
+        width: 100%;
+        border: 2px solid rgba($link-color, 0.54);
+        padding: 10px;
+        color: $main-color;
+        &:focus {
+            border-color: $btn-color;
+            opacity: 1;
+        }
+        &--repeat {
+            margin-bottom: 17px;
+        }
+        &:valid {
+            background-color: rgba($btn-color, 0.4);
+            border-color: $bg-color;
+        }
+    }
+
+    &__input-checkbox {
+        width: 0;
+        opacity: 0.5;
+    }
+    &__checkbox {
+        @extend %flex-row-center;
+        width: 16px;
+        height: 16px;
+        background-color: $btn-color ;
+        border: 2px solid #23ae92;
+        transition: font-size .2s ease;
+        margin-right: 7px;
+        font-size: 0;
+    }
+    &__label--checkbox:hover .form__checkbox {
+        background-color: $tabs-hover-color;
+    }
+    &__input-checkbox:checked + .form__label--checkbox .form__checkbox {
+        font-size: 13px;
+    }
+    
+    &__link {
+        font-size: $small-size;
+        color: $link-color;
+        font-weight: $regular;
+        letter-spacing: $letter-spacing;
+        border-bottom: 1px solid transparent;
+        margin-bottom: 20px;
+        &:hover {
+            border-bottom: 1px solid $btn-color;
+        }
+        &:focus {
+            color: $btn-color;
+        }
+    }
+}

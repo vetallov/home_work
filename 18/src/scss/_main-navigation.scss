@@ -1,0 +1,145 @@
+$styles: main-nav;
+.#{$styles} {
+    @include flex-row(space-between);
+    margin-bottom: 60px;
+    position: relative;
+
+    @include media($screen-iphone-plus) {
+        margin-bottom: 130px;
+    }
+    @include media($screen-tablet-small) {
+        margin-bottom: 200px;
+    }
+    @include media($screen-tablet) {
+        margin-bottom: 258px;
+    }
+    // @include media($screen-desktop-large) {
+        
+    // }
+
+    &__list {
+        display: none;
+
+        @include media($screen-netbook) {
+            @include flex-row;
+        }
+    }
+
+    &__mobile-list {
+        display: none;
+
+        &.list-active {
+            display: flex;
+            width: 100%;
+            @include flex-col;
+            position: absolute;
+            z-index: 2;
+            top: 50px;
+            right: 0;
+            background-color: $N0;
+            padding: 0px 50px 30px;
+            margin-top: 6px;
+
+            @include media($screen-tablet-small) {
+                width: calc(100vw - 65%);
+            }
+            @include media($screen-netbook) {
+                display: none;
+            }
+        }
+    }
+
+    &__item {
+        text-transform: uppercase;
+        font-size: $H24;
+        font-weight: $bold;
+        line-height: 1.1;
+ 
+        @include media($screen-netbook) {
+            margin-right: 40px;
+        
+            &:last-child {
+                margin-right: 0;
+            } 
+        }
+        @include media($screen-desktop-large) {
+            font-size: $H16;
+        }
+
+    }
+    
+    &__link {
+        &:before {
+            content: '';
+            width: 100%;
+            height: 3px;
+            display: inline-block;
+            background-color: transparent;
+        }
+        &--active {
+            &:before {
+                background-color: transparent;
+            }
+        }
+        &:focus {
+            color: lighten($text-color, 10%);
+        }
+        @include media($screen-netbook) {
+            &:hover,
+            &--active {
+                &:before {
+                    background-color: $btn-orange;
+                }
+            }
+        }
+    }
+    &__burger {
+        display: inline-flex;
+        width: 46px;
+        height: 42px;
+        background-color: transparent;
+        position: relative;
+        right: 2%;
+        top: -10px;
+        span {
+            width: 100%;
+            height: 4px;
+            background-color: $text-color;
+            border-radius: 3px;
+            position: absolute;
+            &:before,
+            &:after {
+                content: '';
+                width: 100%;
+                height: 4px;
+                position: absolute;
+                border-radius: 3px;
+                margin-left: -50%;
+                transition: transform 0.3s ease;
+                background-color: $text-color;
+            }
+            &:before {
+                transform: translateY(-14px); 
+            }
+            &:after {
+                transform: translateY(14px);
+            }
+        }
+
+        &.active {
+            span {
+                background-color: transparent;
+                &:before {
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        @include media($screen-netbook) {
+            display: none;
+        }
+    }
+}

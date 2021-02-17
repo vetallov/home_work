@@ -1,0 +1,15 @@
+.form__btn {
+    min-width: 260px;
+    min-height: 42px;
+    padding: 12px 0;
+    color: inherit;
+    font-size: inherit;
+    background-color: $btn-color;
+    border: none;
+    margin-bottom: 30px;
+    cursor: pointer;
+    &:hover {
+        background-color: $tabs-hover-color;
+        outline-color: $tabs-hover-color;
+    }
+}

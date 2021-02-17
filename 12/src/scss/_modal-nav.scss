@@ -1,0 +1,20 @@
+.modal-nav {
+    &__list {
+        @include flex();
+        margin-bottom: 50px;
+    }
+    &__item:not(:last-child) {
+        margin-right: 25px;
+    }
+    &__link {
+        border-bottom: 2px solid transparent;
+        color: rgba($main-color, 0.5);
+        &:hover {
+            border-bottom: 2px solid $tabs-hover-color;
+        }
+        &--active {
+            border-bottom: 2px solid $tabs-hover-color;
+            color: $main-color;
+        }
+    }
+}

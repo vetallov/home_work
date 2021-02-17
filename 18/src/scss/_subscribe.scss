@@ -1,0 +1,65 @@
+.subscribe {
+    padding: 70px 0 80px;
+
+    @include media($screen-netbook) {
+        background: url('../img/subscribe-bg.jpg') no-repeat;
+    }
+    @include media($screen-desktop-large) {
+        padding: 145px 0 163px;
+    }
+    &__section-container {
+        @include flex-col;
+        padding: 0 15px;
+        @include media($screen-netbook) {
+           margin: 0 auto;
+           max-width: 90%;
+        }
+        @include media($screen-desktop-large) {
+            margin-left: 164px;
+        }
+    }
+    &__title {
+        @include text($H40, 700);
+        margin-bottom: 34px;
+        text-transform: capitalize;
+    }
+    &__text {
+        max-width: 540px;
+        margin-bottom: 30px;
+    }
+    &__form {
+        @include flex-col;
+        width: 100%;
+        @include media($screen-netbook) {
+            @include flex-row;
+        }
+    }
+    &__input {
+        width: 100%;
+        height: 55px;
+        padding: 0 15px;
+        margin-bottom: 30px;
+        @include text($H17);
+        @include border($color: $text-color);
+        &::placeholder {
+            @include text($H15, 300, rgba($text-color, 0.5));
+        }
+        &:focus {
+            outline-color: $btn-green;
+            border-color: $btn-green;
+        }
+
+        @include media($screen-tablet-medium) {
+            max-width: 570px;
+        }
+        @include media($screen-netbook) {
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
+        @include media($screen-desktop-large) {
+        }
+    }
+}
+
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./assets/img/nike-4-logo.png" type="image/x-icon">
+    <title>Nike produkt card</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <article class="product-card">
+            <div class="product-card__column  product-card__column_left">
+                <div class="product-card__logo">
+                    <img src="./assets/img/logo.png" alt="Nike logotype">
+                </div>
+                <div class="product-card__img">
+                    <img src="./assets/img/Nike-SB-Stefan-Janoski-Max.png" alt="">
+                </div>
+                <div class="radio-wrapper">
+                    <input type="radio" class="radio-input" name="radio-btn" id="radio-1" form="card-form" value="black" checked>
+                    <label class="radio-label  radio-label--black" for="radio-1"></label>
+               
+                    <input type="radio" class="radio-input" name="radio-btn" id="radio-2" form="card-form" value="white">
+                    <label class="radio-label  radio-label--white" for="radio-2"></label>
+        
+                    <input type="radio" class="radio-input" name="radio-btn" id="radio-3" form="card-form" value="red">
+                    <label class="radio-label  radio-label--red" for="radio-3"></label>
+            
+                    <input type="radio" class="radio-input" name="radio-btn" id="radio-4" form="card-form" value="aqua">
+                    <label class="radio-label  radio-label--aqua" for="radio-4"></label>
+                </div>
+            </div>
+            <div class="product-card__column  product-card__column_right">
+                <h3 class="product-card__title">Nike SB Stefan <span>Janoski Max</span></h3>
+                <p class="product-card__descr">Unisex Skateboarding Shoe (Men's Sizing)</p>
+                <div class="product-card__rating">
+                    <img src="./assets/img/Stars.png" alt="rating stars">
+                </div>
+                <form action="#" class="card-form" id="card-form">
+                    <div class="select-block-wrapper">
+                        <div class="select-wrapper">
+                            <select class="card-form__select  card-form__select--size" name="size" id="size">
+                                <option value="Size" selected>Size</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <div class="select-wrapper">
+                            <select class="card-form__select  card-form__select--qty" name="quantity" id="quantity"> 
+                                <option value="Qty" selected>Qty</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="product-card__btn" value="Add to cart">Add to card</button>
+                </form>
+            </div>    
+        </article>
+    </div>
+</body>
+</html>

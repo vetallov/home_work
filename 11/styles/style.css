@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Museo Sans Rounded 100";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Museo Sans Rounded 100"),
+    url("../assets/fonts/MuseoSansRounded100.woff") format("woff");
+}
+
+:root {
+    --card-bg-color: #111a28;
+
+    --dark-grey-radio: #1F273F;
+    --white-radio: #ffffff;
+    --red-radio: #ED3333;
+    --aqua-radio: #29E3EA;
+    
+    --btn-color: #4c525a;
+    --border-color: #ffffff;
+
+    --main-font: "Museo Sans Rounded 100", serif;
+    --color-title: #e1e1e1;
+    --color-txt: rgba(225, 225, 225, 0.54);
+    --font-size-main: 14px;
+    --font-size-title: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 100%;
+    background: var(--btn-color);
+    background-size: cover;
+    font-family: var(--main-font);
+    color: var(--color-txt);
+    font-size: var(--font-size-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+img {
+    display: block;
+    width: 100%;
+}
+.container {
+    min-width: 800px;
+    min-height: 600px;
+    padding: 109px 51px 100px 63px;
+    background: var(--btn-color) url('../assets/img/main-bg.jpg') center no-repeat;
+    background-size: cover;
+}
+.product-card {
+    display: flex;
+    justify-content: space-between;
+    min-width: 686px;
+    min-height: 391px;
+    padding: 24px 55px 20px 20px;
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 65px 0 rgba(0, 0, 0, 0.82);
+}
+.product-card__logo {
+    width: 65px;
+    height: 33px;
+    margin-bottom: 69px;
+    align-self: start;
+}
+.product-card__img {
+    width: 329px;
+    height: 159px;
+    margin-bottom: 73px;
+    margin-left: 16px;
+    align-self: start;
+}
+.product-card__column_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-card__column_right {
+    padding-left: 80px;
+    padding-top: 54px;
+}
+.product-card__title {
+    text-transform: capitalize;
+    font-size: var(--font-size-title);
+    color: var(--color-title);
+    letter-spacing: 0.48px;
+    margin-bottom: 15px;
+}
+.product-card__title span {
+    display: block;
+}
+.product-card__descr {
+    letter-spacing: 0.28px;
+    margin-bottom: 24px;
+}
+.product-card__rating {
+    width: 64px;
+    margin-bottom: 27px;
+}
+
+.select-block-wrapper {
+    display: flex;
+    margin-bottom: 42px;
+    width: 142px;
+    justify-content: space-between;
+}
+.select-wrapper {
+    position: relative;
+    min-width: 70px;
+    height: 32px;
+}
+
+.card-form__select {
+    background: none; 
+    display: block;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--color-title);
+    border: 1px solid #ccc;
+    padding: 7px 28px 8px 14px;
+    cursor: pointer;
+}
+.select-wrapper::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-title);
+    border-right: 1px solid var(--color-title);
+    transform: rotate(45deg);
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    z-index: 1;
+}
+  .select-wrapper select:hover {
+    box-shadow: 0 0 3px var(--white-radio);
+}
+  .select-wrapper select:focus {
+    outline: 0;
+    border-color: var(--btn-color);
+}
+
+.radio-wrapper {
+    height: 10px;
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+.radio-input {
+    opacity: 0; 
+    cursor: pointer;
+}
+.radio-input:checked + .radio-label::before {
+    border-color:  #7E838B;
+    width: 12px;
+    height: 12px;
+}
+.radio-label {
+    cursor: pointer;
+    position: relative;
+}
+.radio-label::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(21, 124, 165, 0.2);
+    border-radius: 50%;
+    border: 1px solid transparent;
+    border-color: transparent;
+    position: absolute;
+    top: 3px;
+    left: -16px;
+    pointer-events: none;
+}
+.radio-label--black::before {
+    background-color: var(--dark-grey-radio);
+}
+.radio-label--white::before {
+    background-color: var(--white-radio);
+}
+.radio-label--red::before {
+    background-color: var(--red-radio);
+}
+.radio-label--aqua::before {
+    background-color: var(--aqua-radio);
+}
+
+.product-card__btn {
+    min-width: 184px;
+    min-height: 40px;
+    background-color: var(--btn-color);
+    padding-left: 54px;
+    padding-right: 60px;
+    display: block;
+    font-family: var(--main-font);
+    color: var(--color-txt);
+    border: 1px solid var(--border-color);
+    transition: 0.1s ease-in;
+    cursor: pointer;
+}
+.product-card__btn:hover {
+    box-shadow: 0px 0px 3px 1px var(--white-radio);
+}
+.product-card__btn:active {
+    outline-style: dashed;
+    outline-color: var(--white-radio);
+}
+.product-card__btn:focus {
+    outline-color: var(--dark-grey-radio);
+    box-shadow: inset 0px 0px 3px var(--white-radio);
+}

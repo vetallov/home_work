@@ -1,0 +1,96 @@
+.services {
+    background-color: $services-bg;
+    padding: 90px 0 100px;
+
+    @include media($screen-netbook) {
+        background-image: url('../img/services-bg.png');
+        background-repeat: no-repeat;
+        background-size: 40%;
+        background-position: 90% 50%;
+    }
+    @include media($screen-desktop-large) {
+        padding: 180px 0 150px;
+        background-position: 85% 50%;
+    }
+    &__container {
+        display: flex;
+        @include flex-col(center, center);
+
+        @include media($screen-netbook) {
+            flex-direction: row-reverse;
+        }
+        @include media($screen-desktop-large) {
+            flex-direction: row-reverse;
+        }
+    }
+    &__title {
+        font-size: $H50;
+        margin-bottom: 30px;
+
+        @include media(365px) {
+            font-size: $H55;
+        }
+        @include media($screen-iphone-plus) {
+            font-size: $H60;
+            margin-bottom: 0;
+        }
+    }
+    &__list {
+
+        @include media($screen-netbook) {
+            margin-right: 120px;
+        }
+        @include media($screen-desktop-large) {
+            margin-right: 132px;
+        }
+    }
+    &__item {
+        max-width: 400px;
+        height: 100px;
+        background-color: $N0;
+        // box-shadow: 0px 2px 5px 0 rgba($N00, 0.5);
+        margin-bottom: 20px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        width: 100%;
+        height: 100%;
+        padding: 0 130px 0 30px;
+        text-align: center;                
+        @include flex-row(center, center);
+        @include text($H20, $bold);
+        line-height: 1.35;
+        box-shadow: 0px 2px 5px 0 rgba($N00, 0.5);
+        position: relative;
+        &:hover {
+            box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
+            color: $services-bg;
+        }
+        &::after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            background-color: $N0;
+            border-left: 1px solid $text-color;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        &--1::after {
+            background: url('../img/icons/serv-icon-1.svg') center center no-repeat;
+        }
+        &--2::after {
+            background: url('../img/icons/serv-icon-2.svg') center center no-repeat;
+        }
+        &--3::after {
+            background: url('../img/icons/serv-icon-3.svg') center center no-repeat;
+        }
+        &--4::after {
+            background: url('../img/icons/serv-icon-4.svg') center center no-repeat;
+        }
+    }
+}

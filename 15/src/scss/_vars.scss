@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;900&display=swap');
+
+// Fonts
+$main-font: 'Raleway', sans-serif;
+
+//Font weight
+$light: 300;
+$bold: 700;
+$heavy: 900;
+
+// Colors
+$N0: #ffffff;
+$N00: #000000;
+$text-color: #262626;
+$footer-text-color: #b9b9b9;
+$footer-span-color: #ff2b58;
+    // button color
+    $btn-orange: #ff6033;
+    $btn-red: #f72b3b;
+    $btn-blue: #5585a2;
+    $btn-green: #96b92c;
+
+// blues
+$services-bg:  #70bfff;
+// yellows
+$gallery-bg: #ffe92f;
+// teals
+$about-bg-img: radial-gradient(circle at 0 0, #00c4c4, #00b7b7, #00adad, #009c9c), linear-gradient(to bottom, #00c4c4, #00c4c4);
+$contact-input-bg: #00c4c4; // & gallery-foto-bg
+$contact-input--focus-border: #355b82;
+// purples
+$blog-bg: #b07cf7;
+
+
+@function px_to_rem($target, $context: $base-size) {
+    @if $target==0 {
+      @return 0;
+    }
+  
+    @return $target / $context + 0rem;
+  }
+  
+  $base-size: 16px;
+  
+  /* ---FONT SIZE--- */
+  $H90: px_to_rem(90px);
+  $H72: px_to_rem(72px);
+  $H60: px_to_rem(60px);
+  $H55: px_to_rem(55px);
+  $H50: px_to_rem(50px);
+  $H48: px_to_rem(48px);
+  $H45: px_to_rem(45px);
+  $H40: px_to_rem(40px);
+  $H36: px_to_rem(36px);
+  $H35: px_to_rem(35px);
+  $H33: px_to_rem(33px);
+  $H32: px_to_rem(32px);
+  $H30: px_to_rem(30px);
+  $H28: px_to_rem(28px);
+  $H26: px_to_rem(26px);
+  $H24: px_to_rem(24px);
+  $H22: px_to_rem(22px);
+  $H21: px_to_rem(21px);
+  $H20: px_to_rem(20px);
+  $H19: px_to_rem(19px);
+  $H18: px_to_rem(18px);
+  $H17: px_to_rem(17px);
+  $H16: px_to_rem(16px);
+  $H15: px_to_rem(15px);
+  $H14: px_to_rem(14px);
+  $H13: px_to_rem(13px);
+  $H12: px_to_rem(12px);
+  $H11: px_to_rem(11px);
+  $H10: px_to_rem(10px);
+  $H9: px_to_rem(9px);

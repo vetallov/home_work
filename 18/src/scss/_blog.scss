@@ -1,0 +1,97 @@
+.blog {
+    background-color: $blog-bg;
+    color: $N0;
+    padding: 80px 0 80px;
+
+    @include media($screen-tablet) {
+        padding: 100px 0 120px;
+    }
+    &__section-container {
+        @include flex-col(center, center);
+    }
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__text {
+        margin-bottom: 46px;
+        max-width: 563px;
+        text-align: center;
+    }
+    &__list {
+        margin-bottom: 50px;
+        @include flex-col(stretch, stretch);
+        width: 100%;
+
+        @include media($screen-tablet) {
+            @include flex-row(stretch, stretch);
+        }
+    }
+    &__list-card {
+        // min-width: 100%;
+        // flex-basis: 100%;
+        padding: 160px 0 0;
+        transition: all 0.3s ease;
+        box-shadow: 0px 2px 5px 0 rgba($N00, 0.5);
+        background-image: linear-gradient(to top, $N00, $N0);
+        position: relative;
+        margin-bottom: 30px;
+        &:first-child {
+            background: url('../img/img1.jpg') center center no-repeat;
+            background-size: cover;
+        }
+        &:nth-child(2) {
+            background: url('../img/img2.jpg') center center no-repeat;
+            background-size: cover;
+        }
+        &:last-child {
+            background: url('../img/img3.jpg') center center no-repeat;
+            background-size: cover;
+            // margin-right: 0;
+            margin-bottom: 0;
+        }
+
+        @include media($screen-tablet) {
+            margin-right: 28px;
+            margin-bottom: 0;
+            // min-width: initial;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                box-shadow: 0 4px 10px 0 rgba($N00, 0.5);
+            }
+        }
+    }
+    &__card-date {
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+        background-color: rgba($text-color, 0.5);
+        @include flex-col(center, center);
+        @include text($H32, $bold);
+        text-transform: uppercase;
+        line-height: 1;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    &__card-month {
+        @include text($H20, $heavy);
+        line-height: 1.19;
+    }
+    &__text-wrapper {
+        background-image: linear-gradient(to top, $N00, transparent);
+        padding: 50px 43px 23px 20px;
+    }
+    &__card-title {
+        margin-bottom: 18px;
+        @include text($H20, 700);
+        line-height: 1.25;
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+    &__card-description {
+        font-size: $H13;
+    }
+}

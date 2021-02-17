@@ -1,0 +1,52 @@
+$scroll-width: 25px;
+$styles: header;
+.#{$styles} {
+    min-height: 100vh;
+    padding: 20px 0 20px;
+    background-color: #EAE9EE;   
+    position: relative;
+
+    @include media(660px) {
+        padding: 50px 0 70px;
+        background: url('../img/intro-bg.jpg') center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    &__title {
+        @include text($H60, 900);
+        line-height: 1;
+        margin-bottom: 40px;
+
+        @include media($screen-iphone-plus) {
+            margin-bottom: 30px;
+        }
+    }
+    &__descr {
+        max-width: 370px;
+        margin-bottom: 50px;
+
+        @include media($screen-iphone-plus) {
+            margin-bottom: 30px;
+        }
+    }
+    &__scroll {
+        background: url('../img/icons/scroll.png') center center no-repeat;
+        font-size: 0;
+        height: 40px;
+        position: absolute;
+        bottom: 50px;
+        width: $scroll-width;
+        left: calc(50% - #{$scroll-width} / 2);
+
+        &:hover {
+            opacity: 0.6;
+        }
+        &:active {
+            opacity: 1;
+            transform: scale(0.9);
+        }
+        @include media($screen-iphone-plus) {
+            bottom: 70px;
+        }
+    }
+}
